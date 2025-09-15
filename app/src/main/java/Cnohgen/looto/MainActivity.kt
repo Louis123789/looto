@@ -13,8 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import Cnohgen.looto.ui.theme.LootoTheme
 
-lateinit var lucky: Int
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,10 +31,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Play(modifier: Modifier = Modifier) {
-    var lucky = (1..100).random()
-
     Text(
-        text = "樂透數字(1-100)為 $lucky",
+        text = "Hello !",
         modifier = modifier
     )
 }
