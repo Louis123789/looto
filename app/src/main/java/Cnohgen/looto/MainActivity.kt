@@ -31,8 +31,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Play(modifier: Modifier = Modifier) {
+    var lucky = (1..100).random()
+
     Text(
-        text = "Hello !",
+        text = "樂透數字(1-100)為 $lucky",
         modifier = modifier
     )
 }
