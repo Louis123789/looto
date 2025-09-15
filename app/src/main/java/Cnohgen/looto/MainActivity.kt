@@ -12,8 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import Cnohgen.looto.ui.theme.LootoTheme
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.material3.Button
+import androidx.compose.ui.Alignment
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +38,9 @@ class MainActivity : ComponentActivity() {
 fun Play(modifier: Modifier = Modifier) {
     var lucky = (1..100).random()
 
-    Column(modifier = modifier) { // <-- 將 Text 和 Button 放在 Column 中
+    Column(modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally) { // <-- 將 Text 和 Button 放在 Column 中
         Text(
             text = "樂透數字(1-100)為 $lucky"
         )
